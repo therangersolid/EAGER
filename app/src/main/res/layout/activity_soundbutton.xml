@@ -8,13 +8,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.team5.emergencyapp.firebasetest.view.android.Activity_SoundButton">
+    tools:context="com.pk.eager.view.android.Activity_SoundButton">
 
     <Button
-        android:text="Siren"
+        android:id="@+id/play_cat_meow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/siren2"
+        android:text="Siren"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/play_cat_meow" />
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

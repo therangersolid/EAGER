@@ -91,7 +91,7 @@ public class Activity_SimpleCalling extends AppCompatActivity {
          * hard-wire in some values to illustrate how to use such data, once obtained,
          * to make phone calls. The names and numbers are made up.*/
 
-        phoneNum[0] = "408-649-1420";
+        phoneNum[0] = "911";
         /*
         phoneNum[1] = "999-000-0002";
         phoneNum[2] = "999-000-0003";
