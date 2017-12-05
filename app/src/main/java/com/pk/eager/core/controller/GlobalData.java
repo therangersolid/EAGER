@@ -1,5 +1,6 @@
 package com.pk.eager.core.controller;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.pk.eager.core.model.User;
 
 /**
@@ -8,4 +9,5 @@ import com.pk.eager.core.model.User;
 
 public class GlobalData {
     public static User u;
+    public static FirebaseAuth auth;
 }

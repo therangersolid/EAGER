@@ -5,24 +5,31 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-feature android:name="android.hardware.usb.host" />
+
     <uses-permission android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <uses-feature android:name="android.hardware.usb.host" />
+
     <uses-permission android:name="android.hardware.usb.host" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
+        android:name=".XBeeManagerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" android:name=".XBeeManagerApplication">
+        android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-        <uses-library android:name="com.digi.android" android:required="false"/>
+        <uses-library
+            android:name="com.digi.android"
+            android:required="false" />
 
         <!-- Facebook Configuration -->
         <meta-data
@@ -48,8 +55,7 @@
         <activity
             android:name=".Dashboard"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <activity
             android:name=".view.android.Activity_Splash"
@@ -106,28 +112,20 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".NotificationSetting"
-            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"
-            />
+            android:theme="@style/Theme.AppCompat.Light.Dialog.Alert" />
         <activity android:name=".AdminChatThread" />
         <activity android:name=".ClientChatThread"></activity>
+        <activity android:name=".view.android.Activity_Contact"></activity>
+        <activity android:name=".view.android.Activity_Message"></activity>
+        <activity android:name=".view.android.Activity_AddGroup"></activity>
+        <activity android:name=".view.android.Activity_SoundButton"></activity>
+        <activity android:name=".view.android.Activity_SimpleCalling"></activity>
+        <activity android:name=".view.android.Activity_LocationUsingLocationAPI"></activity>
         <activity
-            android:name=".view.android.Activity_Contact">
-        </activity>
-        <activity
-            android:name=".view.android.Activity_Message">
-        </activity>
-        <activity
-            android:name=".view.android.Activity_AddGroup">
-        </activity>
-        <activity
-            android:name=".view.android.Activity_SoundButton">
-        </activity>
-        <activity
-            android:name=".view.android.Activity_SimpleCalling">
-        </activity>
-        <activity
-            android:name=".view.android.Activity_LocationUsingLocationAPI">
-        </activity>
+            android:name=".view.android.Activity_Login"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.android.Activity_Signup"></activity>
+        <activity android:name=".view.android.Activity_ResetPassword"></activity>
     </application>
 
 </manifest>

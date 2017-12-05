@@ -37,7 +37,10 @@ public class DUser {
         final CountDownLatch doneSignal = new CountDownLatch(1);
         final NotFoundException notFoundException = new NotFoundException();
         if (user.getId() == null) { // Create
-
+            DatabaseReference groupRef = myRef.push();
+            user.setId(groupRef.getKey());
+            groupRef.child("email").setValue(user.getEmail());
+            Log.e("Test","New user saved as "+groupRef.getKey()+" and "+user.getEmail());
         } else if (read) { // Read
             myRef = myRef.child(user.getId());
             ValueEventListener vel = new ValueEventListener(){

@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.pk.eager.Dashboard;
 import com.pk.eager.R;
 import com.pk.eager.core.controller.Run;
 
@@ -28,7 +27,7 @@ public class Activity_Splash extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(activitySplash, Dashboard.class);
+                        Intent intent = new Intent(activitySplash, Activity_Login.class);
                         activitySplash.startActivity(intent);
                         activitySplash.finish();
                     }
