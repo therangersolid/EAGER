@@ -1,5 +1,6 @@
 package com.pk.eager.core.controller;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.pk.eager.core.model.User;
 import com.pk.eager.firebase.FirebaseCore;
 
@@ -11,6 +12,9 @@ public class Run {
 
     // Runt it at least once on UI thread
     public static void initialize() {
+        //Get Firebase auth instance
+        GlobalData.auth = FirebaseAuth.getInstance();
+
         GlobalData.u = new User();
         GlobalData.u.setId("Hh7qGadAgPeRUJYAEGjvRu845DC3");//
         Thread t = new Thread(new Runnable() {
