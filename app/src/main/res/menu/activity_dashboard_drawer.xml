@@ -31,6 +31,10 @@
             android:icon="@drawable/ic_notifications_active_black_24dp"
             android:title="Location" />
         <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_notifications_active_black_24dp"
+            android:title="Logout" />
+        <item
             android:id="@+id/nav_simplecalling"
             android:icon="@drawable/ic_notifications_active_black_24dp"
             android:title="Emergency Call" />

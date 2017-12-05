@@ -1,6 +1,7 @@
 package com.pk.eager;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -35,8 +36,10 @@ import com.pk.eager.ReportFragments.Constant;
 import com.pk.eager.ReportFragments.IncidentType;
 import com.pk.eager.ReportObject.IncidentReport;
 import com.pk.eager.User.Account;
+import com.pk.eager.core.controller.GlobalData;
 import com.pk.eager.view.android.Activity_Contact;
 import com.pk.eager.view.android.Activity_LocationUsingLocationAPI;
+import com.pk.eager.view.android.Activity_Login;
 import com.pk.eager.view.android.Activity_SimpleCalling;
 import com.pk.eager.view.android.Activity_SoundButton;
 
@@ -199,6 +202,11 @@ public class Dashboard extends AppCompatActivity
         }else if (id == R.id.nav_simplecalling) {
             Intent intent = new Intent(dashboard, Activity_SimpleCalling.class);
             dashboard.startActivity(intent);
+        }else if (id == R.id.nav_logout) {
+            GlobalData.auth.signOut();
+            Intent intent = new Intent(dashboard, Activity_Login.class);
+            dashboard.startActivity(intent);
+            dashboard.finish();
         }
 
         // Add admin mode here
